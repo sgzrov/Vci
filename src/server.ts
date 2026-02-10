@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import cors from "cors";
 import { RoomManager } from "./room-manager";
 import { VapiEvent } from "./types";
 
@@ -14,6 +15,7 @@ import { VapiEvent } from "./types";
  */
 export function createApp(roomManager: RoomManager) {
   const app = express();
+  app.use(cors());
   app.use(express.json());
 
   // ── Health check ──────────────────────────────────────────────

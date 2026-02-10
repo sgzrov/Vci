@@ -50,7 +50,8 @@ async function main() {
   });
 
   // Run the mock test automatically on startup (for demo)
-  if (!process.env.HATHORA_PROCESS_ID) {
+  // Set SKIP_MOCK=true to disable
+  if (!process.env.HATHORA_PROCESS_ID && process.env.SKIP_MOCK !== "true") {
     console.log("[init] Running mock test (local dev mode)...\n");
     runMockTest(roomManager);
   }
