@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@hathora/cloud-sdk-typescript": "^2.2.4",
+    "@types/cors": "^2.8.19",
+    "cors": "^2.8.6",
     "dotenv": "^17.2.4",
     "express": "^4.18.2"
   },
